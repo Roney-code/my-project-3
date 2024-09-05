@@ -1,0 +1,272 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARIOTS COFFEES AND BARISTA ACADMEY</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <style>
+        /* Page transition effect */
+        body {
+            opacity: 0; /* Start with the body hidden */
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        /* Custom Carousel */
+        .carousel-container {
+            max-width: 100%;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+            height: 500px; /* Adjusted height for better display */
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+        }
+
+        .carousel-image {
+            width: 100%; /* Each image takes the full width of the container */
+            height: 100%; /* Each image takes the full height of the container */
+            object-fit: cover; /* Cover the container without distortion */
+        }
+
+        @media (min-width: 768px) {
+            .carousel-image {
+                width: 80%; /* Images will be more prominent on larger screens */
+                margin-right: 20px;
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-beige font-sans overflow-x-hidden">
+    <!-- Navigation Bar -->
+    <nav class="bg-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center text-gold text-2xl font-bold">
+                <img src="images/logo.png" alt="CHARIOTS COFFEES AND BARISTA ACADEMY LIMITED Logo" class="h-8 mr-3"> CHARIOTS COFFEES AND BARISTA ACADEMY LIMITED
+            </a>
+            <div class="flex items-center">
+                <button id="nav-toggle" class="text-gold focus:outline-none md:hidden mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <ul id="nav-menu" class="hidden md:flex space-x-6 text-tan">
+                    <li><a href="index.html" class="hover:text-gold font-bolder" style="font-size:20px;">Home</a></li>
+                    <li><a href="product.html" class="hover:text-gold font-bolder" style="font-size:20px;">Products</a></li>
+                    <li><a href="about.html" class="hover:text-gold font-bolder" style="font-size:20px;">About</a></li>
+                    <li><a href="contact.html" class="hover:text-gold font-bolder" style="font-size:20px;">Contact</a></li>
+                </ul>
+                <a href="#footer" class="ml-6 text-tan border border-gold py-2 px-4 rounded hover:bg-gold hover:text-white">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-cover bg-center" style="background-image: url('images/ron11.JPEG');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
+            <h1 class="text-5xl font-bold">Welcome to Chariots Coffees and Barista Academy</h1>
+            <p class="mt-4 text-lg">Explore the world of coffee and enhance your barista skills.</p>
+            <div class="mt-8 w-full max-w-md">
+                <input type="text" placeholder="Search..." class="w-full p-3 rounded-lg bg-white text-gray-800 placeholder-gray-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Our Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <h3>Flat White</h3>
+                <p>A flat white is a coffee drink consisting of espresso and steamed milk. It generally has a higher proportion of espresso to milk than a caff? latte, and lacks the thick layer of foam in a cappuccino. While the origin of the flat white is unclear.</p>
+            </div>
+            <div class="category-card">
+                <h3>Cappuccino</h3>
+                <p>Cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk including a layer of milk foam. Variations of the drink involve the use of cream instead of milk, using non-dairy milk substitutes and flavoring with cocoa powder or cinnamon.</p>
+            </div>
+            <div class="category-card">
+                <h3>Iced Coffee</h3>
+                <p>Iced coffee is a coffee beverage served cold. It may be prepared either by brewing coffee normally and then serving it over ice or in cold milk or by brewing the coffee cold. In hot brewing, sweeteners and flavoring may be added before cooling, as they dissolve faster.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Carousel -->
+    <section class="carousel-container">
+        <div class="carousel-slide">
+            <img src="images/simon1.JPEG" alt="simon1 Image 1" class="carousel-image">
+            <img src="images/simon2.JPEG" alt="simon2 Image 2" class="carousel-image">
+            <img src="images/ronnie.JPEG" alt="ronnie Image 3" class="carousel-image">
+            <img src="images/ron11.JPEG" alt="ron11 Image 4" class="carousel-image">
+            <img src="images/simon.JPEG" alt="simon Image 5" class="carousel-image">
+            <img src="images/img2.JPEG" alt="img2 Image 5" class="carousel-image">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>OUR PROFILE...</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <img src="https://www.pexels.com/photo/person-holding-cup-of-coffee-latte-with-heart-design-592109/" alt="OUR VISION">
+                <h5>Vision.</h5>
+                <p>"To be a leading provider of high-quality coffee products and professional barista training programs, fostering a culture of excellence, innovation, creativity and sustainability in the coffee industry.!"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://www.pexels.com/photo/flatlay-photography-of-white-ceramic-coffee-cup-and-saucer-1282311/" alt="Mission 2">
+                <h5>Mission</h5>
+                <p>"Chariots Coffee and Barista Academy limited is committed to sourcing the finest coffee beans, roasting them to perfection, and empowering aspiring baristas with the knowledge and skills to succeed in the competitive coffee industry.
+ We strive to create a welcoming and inclusive environment where coffee lovers and professionals can learn, connect, and grow together. 
+."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/ron6.PNG" alt="VALUES 3">
+                <h5>VALUES</h5>
+                <p>"Quality: We are dedicated to producing exceptional coffee products and providing top-notch training programs.!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Rotating Social Media Icons -->
+    <footer id="footer" class="bg-coffee-brown p-8 mt-16">
+        <div class="container mx-auto">
+            <!-- Three Column Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Column 1: About Us -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">About Us</h3>
+                    <p class="text-white">At Chariots Coffees and Barista Academy limited, we are passionate about coffee and education. Join us to explore the world of coffee and enhance your barista skills.</p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="text-white space-y-2">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="product.html" class="hover:underline">Products</a></li>
+                        <li><a href="about.html" class="hover:underline">About</a></li>
+                        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Us -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+                    <p class="text-white">Email:  chariotscoffees@gmail.com</p>
+                    <p class="text-white">Phone: + 256 704073794,0761073794</p>
+                    <p class="text-white">Address: GROVEMALL KITINTALE . PORTBELL ROAD, KAMPALA City</p>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-between items-center mb-6">
+                <p class="text-white">&copy; 2024 Chariots Coffees and Barista Academy limited. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="social-icon rotate-animation"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-6 h-6"></a>
+                    <a href="#" class="social-icon rotate-animation"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Twitter" class="w-6 h-6"></a>
+                    <a href="#" class="social-icon rotate-animation"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="w-6 h-6"></a>
+                </div>
+            </div>
+
+            <!-- Horizontal Rule -->
+            <hr class="border-t border-white mb-4">
+
+            <!-- Two words on the left and right positioned at the bottom -->
+            <div class="flex justify-between text-white">
+                <span style="font-size:20px;">Privacy Policy</span>
+                <span style="font-size:20px;">Terms of Service</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Carousel, Nav Toggle, and Page Transition -->
+    <script>
+        // Page Transition
+        window.addEventListener('load', () => {
+            document.body.style.opacity = 1;
+        });
+
+        // Carousel
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-image');
+
+        let counter = 0;
+        const size = carouselImages[0].clientWidth;
+
+        function autoSlide() {
+            counter++;
+            if (counter >= carouselImages.length) {
+                counter = 0;
+            }
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+
+        setInterval(autoSlide, 3000); // Slide every 3 seconds
+
+        // Navigation Toggle
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll for Sign In
+        document.querySelector('a[href="#footer"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Social Media Icons Rotation Animation
+        const socialIcons = document.querySelectorAll('.social-icon');
+        socialIcons.forEach(icon => {
+            icon.addEventListener('mouseover', () => {
+                icon.classList.add('animate-spin');
+            });
+            icon.addEventListener('mouseleave', () => {
+                icon.classList.remove('animate-spin');
+            });
+        });
+    </script>
+</body>
+
+</html>
